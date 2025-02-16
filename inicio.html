@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simonDiceInicio</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+/*Parte inicial del juego (menu)*/
+<body >
+
+    <div class="inicio">
+        <div>
+            <h1 class="inicio__título">BIENVENIDO</h1>
+            <div class="inicio__inferior">
+                <img src="iconomm.png" class="img"/>
+
+            </div>
+            <form>
+                <label>
+                    <input class="inicio__input" type="text" placeholder="Ingrese su nombre">
+                    <button class="inicio__boton" type="submit">Aceptar</button>
+                </label>
+            </form>
+            <button id="iniciar" class="inicio__boton" onclick="window.location.href='simonSays.html'">Iniciar</button>
+            <button id="ranking" class="inicio__boton" >Ranking</button>
+
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
