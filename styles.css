@@ -1,0 +1,238 @@
+/*Cuerpo del programa*/
+body {
+    color: white;
+    background-color: gray;
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+/*Fondo del menú*/
+.inicio {
+    background-color: darkcyan;
+    width: 80%;
+    max-width: 500px;
+    min-width: 300px;
+    min-height: 700px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5% auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/*Parte inferior del menú*/
+.inicio__inferior {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+/*Imagen del menú*/
+.img {
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+/*Título del menú*/
+.inicio__título {
+    flex-wrap: wrap;
+    margin: 0 auto 20px auto;
+}
+
+.inicio__subtítulo {
+    flex-wrap: wrap;
+    margin: 0 auto 10px auto;
+}
+/*Input del menú*/
+.inicio__input {
+    flex-wrap: wrap;
+    margin: 2% auto;
+    width: 90%;
+    max-width: 190px;
+}
+/*Boton inicio menú*/
+.inicio__boton {
+    flex-wrap: wrap;
+    margin: 5% auto 2% auto;
+    background-color: darkblue;
+    border: none;
+    width: 50%;
+    max-width: 100px;
+    height: 40px;
+    color: white;
+    border-radius: 50%;
+}
+/*Títulos*/
+h1 {
+    margin-top: 20px;
+    margin-bottom: 11%;
+}
+/*Interfaz de la parte principal del juego*/
+#interfaz__contenedor-juego {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 30px;
+    justify-content: center;
+    margin: 50px auto;
+    transform: rotate(45deg);
+}
+/*Clase cuadros*/
+.cuadro {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    animation: pulsaciones 2s infinite;
+}
+/*Colores de los cuadros*/
+#uno {
+    background-color: green;
+}
+
+#dos {
+    background-color: red;
+}
+
+#tres {
+    background-color: blue;
+}
+
+#cuatro {
+    background-color: yellow;
+}
+/*Boton para iniciar juego*/
+#listo {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 20%;
+}
+/*animaciones*/
+@keyframes mostrarPatron {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulsaciones {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+/*Rondas del juego*/
+#ronda {
+    background-color: black;
+    width: 10%;
+    justify-content: center;
+    text-align: center;
+    min-width: 20%;
+    margin-left: 10%;
+}
+/*Para presionar e iluminar boton listo*/
+#listo:hover {
+    background-color: white;
+}
+/*Mostrar animacion de patron*/
+.patron-activo {
+    animation: mostrarPatron 0.6s;
+}
+/*Brilo al hacer click*/
+.click-activo {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.3s;
+}
+/*Renponsive*/
+@media (max-width: 768px) {
+    #interfaz__contenedor-juego {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+    }
+    .cuadro {
+        width: 80%;
+        height: 80%;
+    }
+    .inicio{
+        width: 90%;
+        height: auto;
+    }
+    .inicio__título{
+        width: 90%;
+    }
+    .img{
+        width: 90%;
+    }
+    .inicio__subtítulo{
+        width: 90%;
+    }
+    .inicio__input{
+        width: 90%;
+    }
+    .inicio__boton{
+        width: 90%;
+    }
+    #ronda{
+        width: 20%;
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    }
+    #listo {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+@media (min-width: 480px) {
+    #interfaz__contenedor-juego {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+    }
+    .cuadro {
+        width: 70%;
+        height: 70%;
+    }
+    
+    .inicio{
+        width: 95%;
+        padding: 10px;
+    }
+    #listo {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    .inicio__título{
+        width: 90%;
+    }
+    .img{
+        width: 90%;
+    }
+    .inicio__subtítulo{
+        width: 90%;
+    }
+    .inicio__input{
+        width: 90%;
+    }
+    .inicio__boton{
+        width: 90%;
+    }
+
+    #ronda{
+        width: 10%;
+        font-size: 18px;
+        padding: 8px 16px;
+
+    }
+    h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+}

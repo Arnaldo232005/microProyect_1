@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simonDiceJuego</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>SimonDice</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+/*Interfaz del juego*/
 <body>
-    <div>
-        <h1 class="simonDiceJuego__título">!A JUGAR¡</h1>
-        <button id="listo">Listo</button>
+    <h1>!A JUGAR¡</h1>
+    <div id="interfaz__contenedor-juego">
+        <div id="uno" class="cuadro"></div>
+        <div id="dos" class="cuadro"></div>
+        <div id="tres" class="cuadro"></div>
+        <div id="cuatro" class="cuadro"></div>
     </div>
-    <div class="simonDiceJuego__juego">
-        <div class="cuadro uno"></div>
-        <div class="cuadro dos"></div>
-        <div class="cuadro tres"></div>
-        <div class="cuadro cuatro"></div>
-    </div>
-    <div id="rondas"></div>
+    <div id="ronda">Ronda</div>
+    <button id="listo">Listo</button>
     <script src="script.js"></script>
 </body>
 </html>
