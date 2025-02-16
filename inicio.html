@@ -6,29 +6,42 @@
     <title>simonDiceInicio</title>
     <link href="styles.css" rel="stylesheet">
 </head>
-/*Parte inicial del juego (menu)*/
-<body >
-
+/*Pagina inicial*/
+<body>
     <div class="inicio">
         <div>
             <h1 class="inicio__título">BIENVENIDO</h1>
             <div class="inicio__inferior">
                 <img src="iconomm.png" class="img"/>
-
             </div>
-            <form>
+            <form id="nombre-formulario">
                 <label>
-                    <input class="inicio__input" type="text" placeholder="Ingrese su nombre">
+                    <input id="nombre-jugador" class="inicio__input" type="text" placeholder="Ingrese su nombre">
                     <button class="inicio__boton" type="submit">Aceptar</button>
                 </label>
             </form>
-            <button id="iniciar" class="inicio__boton" onclick="window.location.href='simonSays.html'">Iniciar</button>
-            <button id="ranking" class="inicio__boton" >Ranking</button>
-
-
+            <button id="iniciar" class="inicio__boton">Iniciar</button>
+            <button id="ranking" class="inicio__boton" onclick="window.location.href='ranking.html'">Ranking</button>
         </div>
-
     </div>
-    <script src="script.js"></script>
+    /*Asegurar que se ingrese un nombre para guardar en la tabla*/
+    <script>
+        document.getElementById('nombre-formulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombreJugador = document.getElementById('nombre-jugador').value;
+            localStorage.setItem('nombreJugador', nombreJugador);
+            window.location.href = 'simonSays.html';
+        });
+
+        document.getElementById('iniciar').addEventListener('click', function() {
+            const nombreJugador = document.getElementById('nombre-jugador').value;
+            if (nombreJugador) {
+                localStorage.setItem('nombreJugador', nombreJugador);
+                window.location.href = 'simonSays.html';
+            } else {
+                alert('Por favor ingrese su nombre.');
+            }
+        });
+    </script>
 </body>
 </html>
